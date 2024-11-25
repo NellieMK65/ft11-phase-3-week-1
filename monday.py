@@ -65,3 +65,13 @@ person = {
 print(person['first_name'])
 print(person.get('courses'))
 # 9. None -> null and undefined
+
+
+# functions
+def greeting(name, age):
+
+    print(f"Good evening {name} {age}")
+
+# call/invoke
+# keyword arguments
+greeting(age=23,name="Rome")
