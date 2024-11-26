@@ -22,7 +22,7 @@ print(type(first_name))
 print(3 > 4)
 # i. Number operators (>,<,>=)
 # ii. Logical operators (and, or, not)
-# iii.
+# iii. Comparision operators (==, !=)
 print(bool(None))
 # 3. int -> whole numbers PEMDAS
 print(type(3))
