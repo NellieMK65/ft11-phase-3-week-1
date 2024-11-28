@@ -16,6 +16,7 @@
 # syntax
 class Person:
     # class attribute
+    # this is shared between all instances
     species = "Homo sapiens"
 
 
@@ -33,10 +34,36 @@ class Person:
     def walk(self, pace):
         print(f"{self.name} is walking at {pace}")
 
+    def save(self):
+        # write SQL logic to save info to db
+        pass
+
+    # class method
+    @classmethod
+    def sleep(cls, name):
+        # cls is the entire class instance
+        # you can use the cls parameter to create an instance of the
+        # class
+        new_person = cls(name)
+        print(f"{new_person.name} is sleeping")
+
+class Message:
+    def __init__(self, message, recepient):
+        self.message = message
+        self.recepient = recepient
+
+    def send(self):
+        pass
+
 # create an instance of the class to get the object
 person1 = Person("John", 27)
 
+Person.sleep(name="Oliver")
+
+person1.save()
+
 # person1.name = "John"
+# person1.sleep()
 
 print(person1.name)
 # accesing class attribute through the instance
